@@ -1,0 +1,48 @@
+# Home Assistant Supervisor add-on manifest.
+# https://developers.home-assistant.io/docs/add-ons/configuration
+#
+# `image` is a pre-built image (see .github/workflows/addon-release.yml) —
+# Supervisor pulls `${image}:${version}`, it never builds on-device.
+# Bumping `version` here and pushing to main is the entire release process:
+# Supervisor shows "Update available" and pulls the new tag, no SSH needed.
+name: Vinory API
+version: "1.0.0"
+slug: vinory_api
+description: Vinory wine cellar REST API (Fastify + Drizzle + PostgreSQL)
+url: https://github.com/sebbalex/vinory
+arch:
+  - aarch64
+image: ghcr.io/sebbalex/aarch64-addon-vinory-api
+# Our own image is already a well-behaved PID 1 (plain `node`), so we don't
+# want Supervisor's s6-overlay injected on top of it.
+init: false
+# "application" = nothing else in Supervisor depends on this add-on starting
+# first (as opposed to "services", e.g. a database other add-ons need).
+startup: application
+boot: auto
+ports:
+  3000/tcp: 3000
+ports_description:
+  3000/tcp: Vinory API HTTP port
+# Defaults for options with a sensible fallback. `database_url` and
+# `jwt_secret` are deliberately absent — they're required (see schema) and
+# have no safe default; Supervisor blocks Start until the user fills them in
+# via the Configuration tab.
+options:
+  jwt_expiry: "15m"
+  bcrypt_salt_rounds: 12
+  llm_model: "claude-sonnet-4-6"
+  pairing_cache_ttl_seconds: 604800
+  embedding_dim: 512
+schema:
+  database_url: "url"
+  jwt_secret: "password"
+  jwt_expiry: "str"
+  bcrypt_salt_rounds: "int(10,14)"
+  llm_api_key: "password?"
+  llm_model: "str"
+  pairing_cache_ttl_seconds: "int"
+  redis_url: "url?"
+  embedding_api_url: "url?"
+  embedding_api_key: "password?"
+  embedding_dim: "int"

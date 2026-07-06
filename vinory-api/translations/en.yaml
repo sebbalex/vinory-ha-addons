@@ -1,0 +1,41 @@
+configuration:
+  database_url:
+    name: Database URL
+    description: >-
+      PostgreSQL connection string, e.g.
+      postgres://user:pass@host:5432/db (a Supabase connection string works
+      too). Required.
+  jwt_secret:
+    name: JWT Secret
+    description: >-
+      Signing secret for auth tokens, minimum 32 characters. Generate with
+      `openssl rand -base64 32`. Required.
+  jwt_expiry:
+    name: JWT Expiry
+    description: Access token lifetime, e.g. 15m, 1h, 24h.
+  bcrypt_salt_rounds:
+    name: Bcrypt Salt Rounds
+    description: Password hashing cost (10-14). Higher is slower but more secure.
+  llm_api_key:
+    name: Anthropic API Key
+    description: >-
+      Optional. Enables the LLM pairing/OCR fallback. Leave blank to stay
+      fully deterministic.
+  llm_model:
+    name: LLM Model
+    description: Claude model ID used for the pairing/OCR fallback.
+  pairing_cache_ttl_seconds:
+    name: Pairing Cache TTL
+    description: How long, in seconds, generated pairings are cached.
+  redis_url:
+    name: Redis URL
+    description: Optional. If unset, an in-memory cache is used instead.
+  embedding_api_url:
+    name: Embedding Service URL
+    description: Optional. Enables the visual label-matching signal.
+  embedding_api_key:
+    name: Embedding Service API Key
+    description: Optional bearer token for the embedding service.
+  embedding_dim:
+    name: Embedding Dimensions
+    description: Must match the embedding model and the stored vectors (default 512).
