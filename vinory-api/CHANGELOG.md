@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2
+
+- fix(docker): ship `@vinory/notification-engine` in the runtime image —
+  1.0.1 crashed on start with `MODULE_NOT_FOUND` because the runner stage
+  never copied the package's `dist/`, leaving its `node_modules` symlink
+  dangling.
+
 ## 1.0.1
 
 Backend changes shipped since 1.0.0 (previously published under the same
