@@ -6,7 +6,7 @@
 # Bumping `version` here and pushing to main is the entire release process:
 # Supervisor shows "Update available" and pulls the new tag, no SSH needed.
 name: Vinory API
-version: "1.0.1"
+version: "1.0.2"
 slug: vinory_api
 description: Vinory wine cellar REST API (Fastify + Drizzle + PostgreSQL)
 url: https://github.com/sebbalex/vinory
