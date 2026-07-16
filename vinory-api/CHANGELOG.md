@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+
+- feat(api): NV catalog-vintage lookup via /vintages/nv sibling route
+- feat(schemas): accept null vintage in WineSchema for non-vintage (NV) wines
+
 ## 1.0.2
 
 - fix(docker): ship `@vinory/notification-engine` in the runtime image —
