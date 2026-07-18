@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.5
+
+- feat(api): GET /api/wines/catalog/:wineId/vintages — per-wine vintage enumeration
+
 ## 1.0.4
 
 - perf(api): two-phase catalog queries — KNN text search, HNSW-first embedding, pre-ranked meal
