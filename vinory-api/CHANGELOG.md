@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.4
+
+- perf(api): two-phase catalog queries — KNN text search, HNSW-first embedding, pre-ranked meal
+- perf(db): restore missing SQL-only DDL + GiST KNN trigram index (migration 0007)
+
 ## 1.0.3
 
 - feat(api): NV catalog-vintage lookup via /vintages/nv sibling route
