@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6
+
+- fix: improve image search and db index
+
 ## 1.0.5
 
 - feat(api): GET /api/wines/catalog/:wineId/vintages — per-wine vintage enumeration
