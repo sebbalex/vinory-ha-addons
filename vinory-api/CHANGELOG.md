@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.8
+
+- fix(api): time-box embedding and LLM calls on the scan path
+
 ## 1.0.7
 
 - fix(api): stop drizzle-kit push proposing destructive drops
