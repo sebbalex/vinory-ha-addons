@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.7
+
+- fix(api): stop drizzle-kit push proposing destructive drops
+- feat(mobile): record resolved scans from the scan flow
+- docs(api): document the scan-history endpoints
+- feat(api): harvest confirmed scans into the visual fingerprint index
+- feat(api): expose scan history over HTTP
+- feat(api): add scan-history service with DTO mapping
+- feat(api): add scan-history repository contract + in-memory impl
+- feat(api): add scan-history schema + user label embeddings
+
 ## 1.0.6
 
 - fix: improve image search and db index
