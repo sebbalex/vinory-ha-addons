@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.11
+
+- perf(api): rank catalog KNN by plain similarity, not word similarity
+
 ## 1.0.10
 
 - perf(api): char-budget the KNN query, lead with parsed identity tokens
