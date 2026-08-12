@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.9
+
+- perf(api): distill OCR text before the catalog trigram KNN
+
 ## 1.0.8
 
 - fix(api): time-box embedding and LLM calls on the scan path
