@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.10
+
+- perf(api): char-budget the KNN query, lead with parsed identity tokens
+
 ## 1.0.9
 
 - perf(api): distill OCR text before the catalog trigram KNN
