@@ -1,0 +1,25 @@
+# Home Assistant Supervisor add-on manifest — Vinory embedding service.
+# Same release mechanics as vinory-api: `image` is pre-built by
+# .github/workflows/embed-addon-release.yml; Supervisor pulls
+# `${image}:${version}`, never builds on-device. Bump `version`, push to
+# main, Supervisor shows "Update available".
+name: Vinory Embedding
+version: "1.0.0"
+slug: vinory_embed
+description: CLIP label/text embedding service for the Vinory API visual scan signal
+url: https://github.com/sebbalex/vinory
+arch:
+  - aarch64
+image: ghcr.io/sebbalex/aarch64-addon-vinory-embed
+# python is a well-behaved PID 1 here; no s6-overlay needed.
+init: false
+# "services": the Vinory API add-on consumes this one, so it should be up first.
+startup: services
+boot: auto
+ports:
+  8801/tcp: 8801
+ports_description:
+  8801/tcp: Embedding service HTTP port
+options: {}
+schema:
+  api_key: "password?"

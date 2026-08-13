@@ -1,0 +1,6 @@
+configuration:
+  api_key:
+    name: API Key
+    description: >-
+      Optional bearer token. If set, paste the same value into the Vinory API
+      add-on's "Embedding API Key" field. Leave blank on a trusted LAN.
