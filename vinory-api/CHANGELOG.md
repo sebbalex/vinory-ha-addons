@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.12
+
+- perf(api): inline the KNN query text as a sanitized SQL literal
+
 ## 1.0.11
 
 - perf(api): rank catalog KNN by plain similarity, not word similarity
