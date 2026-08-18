@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.13
+
+- fix: reduce supabase database occupation by tuning vector embed search
+
 ## 1.0.12
 
 - perf(api): inline the KNN query text as a sanitized SQL literal
