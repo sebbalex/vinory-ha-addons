@@ -4,7 +4,7 @@
 # `${image}:${version}`, never builds on-device. Bump `version`, push to
 # main, Supervisor shows "Update available".
 name: Vinory Embedding
-version: "1.0.0"
+version: "1.0.1"
 slug: vinory_embed
 description: CLIP label/text embedding service for the Vinory API visual scan signal
 url: https://github.com/sebbalex/vinory
