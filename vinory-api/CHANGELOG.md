@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.14
+
+- test(api): add read-only scan-latency and OCR-recall benchmarks
+- feat(api): split the match rank phase into per-stage timings
+- perf(api): hold the DB pool warm to avoid ~235 ms reconnects on scan
+
 ## 1.0.13
 
 - fix: reduce supabase database occupation by tuning vector embed search
